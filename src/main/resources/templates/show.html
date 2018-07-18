@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <title>Spring security Example</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand" href="/">Bull Horn App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container bg-light ">
+
+
+    <div class="my-5 "></div>
+
+    <div class="my-4 py-5" align="center">
+
+        <table>
+            <tr class="text-dark">
+                <th class="pr-3">Content</th>
+                <th class="pr-3">Sent By</th>
+                <th class="pr-3">Date</th>
+            </tr>
+            <tr>
+                <td class="pr-4" th:text="${message.content}"></td>
+                <td class="pr-3" th:text="${message.setBy}"></td>
+                <td class="pr-3" th:text="${message.datePosted}"></td>
+
+            </tr>
+        </table>
+        <br>
+
+        <button class="btn btn-primary"><a class="text-white" href="/add">Add a Message</a></button>
+
+
+        <!--//th:each="message : ${messages}"-->
+
+        <!--<a href="/">Show All message</a><br />-->
+        <!--Message Content: <span th:text="${message.content}"></span><br/>-->
+        <!--Message Posted Date: <span th:text="${message.datePosted}"></span><br/>-->
+        <!--Message Sender: <span th:text="${message.setBy}"></span><br/>-->
+        <!--<br/>-->
+        <!--<a href="/add">Send a your message</a>-->
+    </div></div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
